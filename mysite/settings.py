@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+SITE_ID = 1

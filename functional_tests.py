@@ -25,8 +25,26 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000/accounts/login/')
         self.assertIn('Login', self.browser.title)
 
-        self.fail('Finish the test!')
 
+
+# creer page a propos
+    def test_page_a_propos(self):
+
+        self.browser.get('http://localhost:8000/pages/a-propos')
+        self.assertIn('A propos', self.browser.title)
+
+# creer page isoc dans le monde
+    def test_page_isoc_dans_le_monde(self):
+
+        self.browser.get('http://localhost:8000/pages/isoc-dans-le-monde')
+        self.assertIn('Isoc dans le monde', self.browser.title)
+
+# creer page notre mission
+    def test_page_notre_mission(self):
+        self.browser.get('http://localhost:8000/pages/notre-mission')
+        self.assertIn('Notre mission', self.browser.title)
+
+        self.fail('Finish the test!')
 
 if __name__ == '__main__':
      unittest.main(warnings='ignore')
