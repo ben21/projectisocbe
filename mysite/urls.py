@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('pages/isoc-dans-le-monde/', views.flatpage, {'url':'/isoc-dans-le-monde/'}, name='isoc-dans-le-monde'),
     path('pages/notre-mission/', views.flatpage, {'url': '/notre-mission/'}, name= 'notre-mission'),
     path('pages/a-propos/', views.flatpage, {'url': '/a-propos/'}, name='a-propos'),
     path('pages/', include('django.contrib.flatpages.urls')),
