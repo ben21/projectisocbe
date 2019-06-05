@@ -44,7 +44,26 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000/pages/notre-mission')
         self.assertIn('Notre mission', self.browser.title)
 
-        self.fail('Finish the test!')
 
+# verifier losrque l'utilisateur est sur la page d'accueil si il clic le bouton mission il arrive sur la page mission
+
+    def test_mission_button_clique(self):
+         self.browser.get('http://localhost:8000')
+         result = self.browser.find_element_by_css_selector("a.mission")
+         result.click()
+         self.assertIn('Notre mission', self.browser.title)
+
+
+
+# verifier lorsque l'utilisateur clique sur le bouton à propos soit rediriger vers la page à propos
+
+    def test_a_propos_button_clique(self):
+         self.browser.get('http://localhost:8000')
+         result = self.browser.find_element_by_css_selector("a.a_propos")
+         result.click()
+         self.assertIn('A propos', self.browser.title)
+
+
+         self.fail('Finish the test!')
 if __name__ == '__main__':
      unittest.main(warnings='ignore')
