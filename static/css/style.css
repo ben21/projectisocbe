@@ -1,7 +1,6 @@
 /********************************/
 /*          STYLES              */
 /********************************/
-
 * {
     scroll-behavior: smooth;
   }
@@ -21,4 +20,7 @@ body {
 
 
 
-
+#spacerPLUS{
+    height: 400%;
+    background-color:  rgb(187, 204, 223)  !important;
+}
