@@ -1,0 +1,9 @@
+
+
+.jumbotron{
+    background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);
+    height: 102vh;
+}
+.jumbotron .text-white .justify-contend-center h2 {
+    margin: 27vh;
+}

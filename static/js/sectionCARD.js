@@ -16,7 +16,7 @@ $().ready(function(){
 
 function rotateCard(btn){
     var $card = $(btn).closest('.card-container');
-    console.log($card);
+    console.log($card); // CHECK  OK
     if($card.hasClass('hover')){
         $card.removeClass('hover');
     } else {
