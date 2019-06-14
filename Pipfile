@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "*"
 selenium = "*"
+whitenoise = "==3.3.1"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
