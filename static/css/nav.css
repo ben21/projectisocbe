@@ -24,15 +24,67 @@ nav {
 }
 
 .logo {
-    line-height: 60px;
+    
     position: fixed;
     float: left;
-    margin: 16px 46px;
+    width: 5%;
     color: #fff;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
 }
+
+.logo-size {
+    width: 200%;
+    margin-top: 29%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-size {
+        width: 50%;
+    }
+  }
+
+.carousel-inner{
+    width:100%;
+    max-height: 100vh !important;
+}
+
+.caroussel{
+    position: relative;
+}
+
+.overlay2{
+margin-top: -298px;
+position: absolute;
+top: 40%;
+left: 40%;
+}
+
+.overlay{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.overlay-titre{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 225%;
+    color: blue;
+    font-family: 'Raleway','Arial';
+    text-align: center;
+}
+
+.overlay-texte{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 137.5%;
+    color: white;
+    font-family: 'Raleway','Arial';
+    text-align: center;
+}
+
+
 
 nav {
     position: fixed;

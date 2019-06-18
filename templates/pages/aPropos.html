@@ -4,14 +4,47 @@
 {% block content %}
 
 <!-- DIV separation entre la nav et le foooter en attendant les sections -->
-<div class="container my-5">
-    <div class="row mt-5">
-        <div class="col-12 bg-danger mt-5">
-            <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis officiis placeat aut rem dolore esse. Fugit vel molestias eos voluptate vitae possimus ut, quis eveniet praesentium nam, modi esse? </h1>
-            <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore blanditiis officiis placeat aut rem dolore esse. Fugit vel molestias eos voluptate vitae possimus ut, quis eveniet praesentium nam, modi esse? </h1>
+<div class="container-fluid my-5 test d-flex justify-contend-center">
+    <div class="row my-5">
+        <div class="col-3 offset-1 my-5">
+            <img class="image" src="{% static 'images/Symbol-Depth-blue-RGB.png' %}" alt="logo blue" id="propos">
+            <div class="lien"> <a href="#" class="lien my-5">Rejoignez-nous. Adhérez !</a>
+            </div>
+            </div>
+        <div class="col-6 ml-5 section">
+            <h1 class="text-dark "> A propos de l’Internet Society  </h1>
+            <p class="text-dark">Nous protégeons les internautes</p>
+            <p class="text-dark">Créée en 1992, l’Internet Society est une association qui représente les
+                    utilisateurs d’Internet dans les instances de la Gouvernance de l’Internet
+                    en Belgique et dans le Monde. Les membres de l’Internet Society France
+                    construisent le futur d’Internet, en en préservant les fondements : un
+                    Internet neutre, unique et ouvert à tous. L’Internet Society est présente
+                    dans plus de 100 pays dans le monde. </p>
         </div>
     </div>
 </div>
 
 
+<!-- DIV separation entre la section et et le foooter  -->
+
+<h1 class="text-center text-dark bg-light my-3 py-4">L’Internet Society en Belgique</h1>
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <img src="{% static 'images/board.png' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- DIV separation entre la section et et le foooter  -->
+
+<div class="container-fluid separateurContact">
+        <div class="container">
+            <div class="row">
+                <img src="{% static 'images/contact.png' %}" alt="" style="width: 109%;">
+            </div>
+        </div>
+    </div>
 {% endblock content %}

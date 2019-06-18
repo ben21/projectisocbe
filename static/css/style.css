@@ -24,3 +24,10 @@ body {
     height: 400%;
     background-color:  rgb(187, 204, 223)  !important;
 }
+#about-us {
+    margin-top: 20%;
+}
+#sectionCard  {
+    margin-top: 5%;
+}
+

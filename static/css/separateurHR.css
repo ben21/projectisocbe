@@ -30,7 +30,7 @@ h1.site-title a{
 	/*text-align: right;*/
 	margin: 1px auto 0px;
 	text-indent: -9999px;
-	background: url(https://i.imgur.com/K0e8UsN.png) 50% 3px no-repeat;
+	
 }
 
 .separateur  hr{
@@ -76,7 +76,7 @@ h1.site-title a{
 		height:120px;
 		margin: 0px auto 0px;
 		text-indent: -9999px;
-    background: url(https://i.imgur.com/yCRPL7z.png) 50% 5px no-repeat;
+    
 	}
 	h1.site-title small{
 		font-size: 35px;
@@ -89,17 +89,6 @@ h1.site-title a{
 
 }
 
-@media (min-width: 992px) {
-  .separateur  hr {
-    
-  }
-}
-
-@media (min-width: 1200px) {
-  .separateur  hr {
-    
-  }
-}
 @-webkit-keyframes thread2 {
 	  0%   { width: 100%; }
 	  50% { width: 100%; }

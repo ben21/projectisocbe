@@ -2,18 +2,19 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Bienvenue à l'Internet Society</title>
-    
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
-    <!-- DEPENDANCE SECTION CARD -->
-    <link href="{% static 'css/pe-icon-7-stroke.css'%}" rel="stylesheet" />
-    <link href="{% static 'css/rotating-card.css' %}" rel="stylesheet" />
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <head>
+        <title>Bienvenue à l'Internet Society</title>
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        
+        <!-- DEPENDANCE SECTION CARD -->
+        <link href="{% static 'css/pe-icon-7-stroke.css'%}" rel="stylesheet" />
+        <link href="{% static 'css/rotating-card.css' %}" rel="stylesheet" />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     
     <!-- DEPENDANCE NAV HEADER FOOTER ECT  -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -22,6 +23,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
+    <!-- DEPENDANCE CARD  P MISSION -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <!-- Style page mission-->
+        <link rel="stylesheet" href="{% static 'css/pMission_card.css' %}">
+
     <!-- STYLE -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/buttonTOP.css' %}">
@@ -30,7 +39,8 @@
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/buttonADHESION.css' %}">
     <link rel="stylesheet" href="{% static 'css/separateurHR.css' %}">
-    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' />
+    <link rel='stylesheet' href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/aPropos.css' %}">
 </head>
 <body>
     
@@ -42,36 +52,39 @@
     
     <!-- HEADER -->
     <div class="wrapper">
-        <header>
-            <!-- NAV -->
-            <nav>
-                <div class="menu-icon">
-                    <i class="fa fa-bars fa-2x"></i>
-                </div>
-                <!-- LOGO -->
-                <div class="logo">
-                    LOGO
-                </div>
-                <!-- MENU -->
-                <div class="menu">
-                    <ul>
-                        <!-- LIEN NAV -->
-                        <li><a href="{% url 'index' %}">{% trans "Accueil" %}</a></li>
-                        <li><a href="{% url 'mission' %}">{% trans "Mission"  %}</a></li>
-                        <li><a href="{% url 'apropos' %}">{% trans "A propos" %}</a></li>
-                        <li><a href="{% url 'internetdanslemonde' %}">{% trans "Internet dans le monde" %}</a></li>
-                        <li><a href="{% url 'rejoindre' %}">{% trans "Nous rejoindre"  %}</a></li>
-                        <li><a href="#">FR </a><a href="#"> NL</a><a href="#"> EN</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- div supp pour le bg -->
-            <div class="bg-dark py-5"> </div>
-            
-            
-        </header>
-    </div>
-    <!-- END HEADER -->
+            <header>
+                <!-- NAV -->
+                <nav>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2">
+                                    <div class="logo">
+                                            <img src="{% static 'images/ISOC-Logo_Light-RGB.png' %}" class="logo-size">
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LOGO -->
+                   
+                    <!-- MENU -->
+                    <div class="menu">
+                        <ul>
+                            <!-- LIEN NAV -->
+                            <li><a href="{% url 'index' %}">{% trans "Accueil" %}</a></li>
+                            <li><a href="{% url 'mission' %}">{% trans "Mission"  %}</a></li>
+                            <li><a href="{% url 'apropos' %}">{% trans "A propos" %}</a></li>
+                            <li><a href="{% url 'internetdanslemonde' %}">{% trans "Internet dans le monde" %}</a></li>
+                            <li><a href="{% url 'rejoindre' %}">{% trans "Nous rejoindre"  %}</a></li>
+                            <li><a href="#">FR </a><a href="#"> NL</a><a href="#"> EN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- div supp pour le bg -->
+                <div class="bg-dark py-5"> </div>
+                
+                
+            </header>
+        </div>
 {% block content %}
 {% endblock content %}
                             </div> <!-- end back panel -->
@@ -153,10 +166,10 @@
         <div class="container">
             <ul class="foote_bottom_ul_amrc">
                 <li><a href="#">Accueil</a></li>
-                <li><a href={ url "mission" }>Mission</a></li>
-                <li><a href="pages/aPropos.html">A propos</a></li>
-                <li><a href="pages/internetDansLeMonde.html">Internet dans le monde</a></li>
-                <li><a href="pages/rejoindre.html">Nous rejoindre</a></li>
+                <li><a href='{ url "mission" }'>Mission</a></li>
+                <li><a href='{ url "apropos" }'>A propos</a></li>
+                <li><a href='{ url "internetdanslemonde" }'>Internet dans le monde</a></li>
+                <li><a href='{ url "nousrejoindre" }'>Nous rejoindre</a></li>
                 <li><a href="#">FR </a><a href="#"> EN</a></li>
             </ul>
             <!--foote_bottom_ul_amrc ends here-->
