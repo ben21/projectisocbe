@@ -1,24 +1,218 @@
-{% load flatpages %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bienvenue à l'Internet Society</title>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <!-- DEPENDANCE SECTION CARD -->
+    <link href="{% static 'css/pe-icon-7-stroke.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/rotating-card.css' %}" rel="stylesheet" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    
+    <!-- DEPENDANCE NAV HEADER FOOTER ECT  -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <!-- STYLE -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buttonTOP.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buttonADHESION.css' %}">
+    <link rel="stylesheet" href="{% static 'css/separateurHR.css' %}">
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' />
+</head>
+<body>
+    
+    
+    <!-- Button top  -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    
+    
+    <!-- HEADER -->
+    <div class="wrapper">
+        <header>
+            <!-- NAV -->
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <!-- LOGO -->
+                <div class="logo">
+                    LOGO
+                </div>
+                <!-- MENU -->
+                <div class="menu">
+                    <ul>
+                        <!-- LIEN NAV -->
+                        <li><a href="{% url 'index' %}">{% trans "Accueil" %}</a></li>
+                        <li><a href="{% url 'mission' %}">{% trans "Mission"  %}</a></li>
+                        <li><a href="{% url 'apropos' %}">{% trans "A propos" %}</a></li>
+                        <li><a href="{% url 'internetdanslemonde' %}">{% trans "Internet dans le monde" %}</a></li>
+                        <li><a href="{% url 'rejoindre' %}">{% trans "Nous rejoindre"  %}</a></li>
+                        <li><a href="#">FR </a><a href="#"> NL</a><a href="#"> EN</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to  }}" />
+                        <select name="language">
+                         {% get_current_language as LANGUAGE_CODE %}
+                         {% get_available_languages as LANGUAGES %}
+                         {% for lang in LANGUAGES %}
+                         <option value="{{ lang.0  }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                                                                                             {{ lang.1  }} ({{ lang.0  }})
+                                                                                                                </option>
+                                                                                                                 {% endfor %}
+                                                                                                                       </select>
+                                                                                                                  <input type="submit" value="Go" />
+            </form>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
-  </head>
-  <body>
-    {% block content %}
-    {% endblock %}
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <!-- div supp pour le bg -->
+            <div class="bg-dark py-5"> </div>
+            
+            
+        </header>
+    </div>
+    <!-- END HEADER -->
+{% block content %}
+{% endblock content %}
+                            </div> <!-- end back panel -->
+                        </div> <!-- end card -->
+                    </div> <!-- end card-container -->
+                </div> <!-- end col-sm-3 -->
+                
+            </div> <!-- end col-sm-10 -->
+        </div> <!-- end row -->
+        <div class="space-100"></div>
+    </div>
+    
+    <!-- End section Actualités -->
+    
+    
+    
+    <!--footer starts from here-->
+    
+    <footer class="footer">
+        <div class="container bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+                    <!--headin5_amrc-->
+                    <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+                    <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+                    <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+                    
+                    
+                </div>
+                
+                
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="#">Image Rectoucing</a></li>
+                        <li><a href="#">Clipping Path</a></li>
+                        <li><a href="#">Hollow Man Montage</a></li>
+                        <li><a href="#">Ebay & Amazon</a></li>
+                        <li><a href="#">Hair Masking/Clipping</a></li>
+                        <li><a href="#">Image Cropping</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+                
+                
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                    <!--headin5_amrc-->
+                    <ul class="footer_ul_amrc">
+                        <li><a href="#">Remove Background</a></li>
+                        <li><a href="#">Shadows & Mirror Reflection</a></li>
+                        <li><a href="#">Logo Design</a></li>
+                        <li><a href="#">Vectorization</a></li>
+                        <li><a href="#">Hair Masking/Clipping</a></li>
+                        <li><a href="#">Image Cropping</a></li>
+                    </ul>
+                    <!--footer_ul_amrc ends here-->
+                </div>
+                
+                
+                <div class=" col-sm-4 col-md  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                    <!--headin5_amrc ends here-->
+                    
+                    <ul class="footer_ul2_amrc">
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                        <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+                    </ul>
+                    <!--footer_ul2_amrc ends here-->
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+            <ul class="foote_bottom_ul_amrc">
+                <li><a href="#">Accueil</a></li>
+                <li><a href={ url "mission" }>Mission</a></li>
+                <li><a href="pages/aPropos.html">A propos</a></li>
+                <li><a href="pages/internetDansLeMonde.html">Internet dans le monde</a></li>
+                <li><a href="pages/rejoindre.html">Nous rejoindre</a></li>
+                <li><a href="#">FR </a><a href="#"> EN</a></li>
+            </ul>
+            <!--foote_bottom_ul_amrc ends here-->
+            <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+            
+            <ul class="social_footer_ul">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!--social_footer_ul ends here-->
+        </div>
+        
+    </footer>
+    
+    <!-- end footer  -->
+    
+    <!-- js -->
+    <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/jquery-1.10.2.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+    <!-- DEPENDANCE multiple effet  -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    
+    <!-- DEPENDANCE B and J -->
+        <script src="{% static 'js/jquery-1.10.2.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+    
+    <!-- DEPENDANCE JS PERSO  -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/navONscroll.js' %}"></script>
+    <script src="{% static 'js/navONscroll.js' %}"></script>
+    <script src="{% static 'js/carousel.js' %}"></script>
+    <script src="{% static 'js/sectionCARD.js' %}"></script>
+    <script src="{% static 'js/buttonTOP.js' %}"></script>
+    
+</body>
 </html>
+
