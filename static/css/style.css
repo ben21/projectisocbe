@@ -17,17 +17,45 @@ body {
     font-weight: lighter;
 }
 
-
-
-
 #spacerPLUS{
     height: 400%;
     background-color:  rgb(187, 204, 223)  !important;
 }
+
+
 #about-us {
     margin-top: 20%;
 }
+
 #sectionCard  {
     margin-top: 5%;
 }
 
+.titre-apropos{
+    color: black;
+    font-size: 40px;
+}
+
+.texte-apropos{
+    color: black;
+    font-size: 25px;
+}
+
+.jumbotron2 {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+
+  }
+
+.card2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-image: url("{% static 'images/Background-Core-Neutral-green-RGB.png' %}");
+    background-clip: border-box;
+}
