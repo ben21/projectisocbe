@@ -24,7 +24,13 @@ body {
 
 
 #about-us {
-    margin-top: 20%;
+    margin-top: 30%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px){
+    #about-us {
+        margin-top: 0%;
+    }
 }
 
 #sectionCard  {
